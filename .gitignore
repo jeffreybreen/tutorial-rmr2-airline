@@ -4,3 +4,7 @@
 .DS_Store
 
 data/local/wordcount/out
+
+data/local/join/out
+
+data/local/airline/out
