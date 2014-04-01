@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright 2013 by Think Big Analytics
+# Copyright 2013-2014 by Think Big Analytics
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,10 +28,10 @@ sudo sh -c 'echo -e "rhadoop\nrhadoop" | passwd hadoop'
 
 if [ `arch` == "i686" ]
 then
-    wget http://download2.rstudio.org/rstudio-server-0.97.336-i386.deb
-    sudo gdebi -n rstudio-server-0.97.336-i386.deb
+    wget http://download2.rstudio.org/rstudio-server-0.98.501-i386.deb
+    sudo gdebi -n rstudio-server-0.98.501-i386.deb
 else
-    wget http://download2.rstudio.org/rstudio-server-0.97.336-amd64.deb
-    sudo gdebi -n rstudio-server-0.97.336-amd64.deb
+    wget http://download2.rstudio.org/rstudio-server-0.98.501-amd64.deb
+    sudo gdebi -n rstudio-server-0.98.501-amd64.deb
 fi
 

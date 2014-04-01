@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Copyright 2013 by Think Big Analytics
+# Copyright 2013-2014 by Think Big Analytics
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -63,12 +63,12 @@ install.packages(c('RJSONIO', 'itertools', 'digest', 'Rcpp', 'functional', 'httr
 EOF
 
 
-# download and install rmr2 2.1.0 from github:
+# download and install rmr2 2.3.0 from github:
 
 rm -rf RHadoop
 mkdir RHadoop
 cd RHadoop
-curl --insecure -L https://raw.github.com/RevolutionAnalytics/rmr2/master/build/rmr2_2.1.0.tar.gz | tar zx
+curl --insecure -L https://raw.github.com/RevolutionAnalytics/rmr2/master/build/rmr2_2.3.0.tar.gz | tar zx
 sudo R CMD INSTALL --byte-compile rmr2
 
 sudo su << EOF1 
