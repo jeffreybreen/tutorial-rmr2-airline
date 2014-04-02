@@ -1,19 +1,19 @@
 #!/bin/sh
 
-sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-7.noarch.rpm
+sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 sudo yum -y install git wget R
 
 sudo ln -s /etc/default/hadoop-0.20-mapreduce /etc/profile.d/hadoop.sh 
 cat  /etc/profile.d/hadoop.sh | sed 's/export //g' > ~/.Renviron
 
-wget http://download2.rstudio.org/rstudio-server-0.97.173-x86_64.rpm
+wget http://download2.rstudio.org/rstudio-server-0.98.501-x86_64.rpm
 
 # using yum update because of dependancies
-sudo yum -y install --nogpgcheck rstudio-server-0.97.173-x86_64.rpm
+sudo yum -y install --nogpgcheck rstudio-server-0.98.501-x86_64.rpm
 rm rstudio-server*
 
 sudo R --no-save << EOF
-install.packages( c('Rcpp','RJSONIO', 'digest', 'functional','stringr'), repos="http://cran.revolutionanalytics.com", INSTALL_opts=c('--byte-compile') )
+install.packages( c('plyr', 'Rcpp','RJSONIO', 'digest', 'functional','stringr'), repos="http://cran.revolutionanalytics.com", INSTALL_opts=c('--byte-compile') )
 EOF
 
 # Download the RHadoop Git Repo for rmr2
